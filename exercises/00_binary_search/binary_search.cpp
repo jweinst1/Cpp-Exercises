@@ -24,7 +24,19 @@
  * found.
  */
 int binary_search( int const v[], int n, int value ) {
-    // TODO
+    int low_ind = 0;
+    int high_ind = n-1;
+    int mid = 0;
+    while(low_ind <= high_ind){
+        mid = (high_ind+low_ind)/2;
+        if(v[mid] == value)
+           return mid;
+        else if(v[mid] > value)
+           high_ind = mid - 1;
+        else
+           low_ind = mid + 1;
+    }
+    return -1;
 }
 
 ////////// EXERCISE ABOVE THIS LINE ///////////////////////////////////////////
