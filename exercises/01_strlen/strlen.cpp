@@ -12,9 +12,9 @@
  * @return Returns the number of characters in \a s.
  */
 size_t strlen( char const *s ) {
-    size_t len = 0;
-    while(*s++) len++;
-    return len;
+    const char* end = s;
+    while(*end++);
+    return end - s - 1;
 }
 
 ////////// EXERCISE ABOVE THIS LINE ///////////////////////////////////////////
